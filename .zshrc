@@ -34,17 +34,40 @@ fi
 # プラグインを読み込み、コマンドにパスを通す
 zplug load --verbose
 
+# コマンド補完を有効化
+autoload -U compinit
+compinit
+
 # ヒストリ(履歴)を保存、数を増やす
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
+setopt EXTENDED_HISTORY # 開始と終了を記録
+setopt share_history # 異なるセッション間で共有
+setopt hist_ignore_dups # 同じコマンドラインを連続で実行した場合は登録しない
+# pecoとの連携
+function peco-history-selection() {
+  BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
+}
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
 # エイリアス
 alias la='ls -la'
 alias cdb='cd-bookmark'
 alias vg='vagrant'
 alias npmgl='npm list -g | grep "^[├└]"'
-#alias tm='tmux -CC'
-#alias ta='tmux -CC attach'
+alias t='tmux'
+alias ta='tmux attach'
 alias fe='forever'
+alias ka='k -a'
+alias usbserial='screen `ls /dev/cu.usbserial-*` 115200 -L'
+alias reload='exec zsh -l'
+alias zshrc='vi ~/.zshrc'
 
+# powerline
+export PATH=$PATH:~/Library/Python/2.7/bin
+powerline-daemon -q
+. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
