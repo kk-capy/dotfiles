@@ -1,3 +1,15 @@
+
+HOSTNAME=`hostname -s`
+LOCAL_ZSHRC_PATH="$HOME/dotfiles/.zshrc.$HOSTNAME"
+[ -f $LOCAL_ZSHRC_PATH ] && source $LOCAL_ZSHRC_PATH
+
+# powerline
+if [ -n "$PYTHON_PATH" ]; then
+  export PATH=$PATH:$PYTHON_PATH/bin
+  powerline-daemon -q
+  . $PYTHON_PATH/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
 # zplugがインストールされていなければインストールする
 [[ -d ~/.zplug ]] || {
   curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
@@ -67,7 +79,3 @@ alias usbserial='screen `ls /dev/cu.usbserial-*` 115200 -L'
 alias reload='exec zsh -l'
 alias zshrc='vi ~/.zshrc'
 
-# powerline
-export PATH=$PATH:~/Library/Python/2.7/bin
-powerline-daemon -q
-. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
