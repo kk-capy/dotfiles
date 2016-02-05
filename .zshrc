@@ -1,7 +1,7 @@
 
 # 環境毎の設定ファイルを読み込む
 HOSTNAME=`hostname -s`
-LOCAL_ZSHRC_PATH="$HOME/.zshrc.$HOSTNAME"
+LOCAL_ZSHRC_PATH="$HOME/.zshrc.local"
 [ -f $LOCAL_ZSHRC_PATH ] && source $LOCAL_ZSHRC_PATH
 
 # powerline
