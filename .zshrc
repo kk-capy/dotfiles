@@ -1,13 +1,13 @@
 
+# 環境毎の設定ファイルを読み込む
 HOSTNAME=`hostname -s`
-LOCAL_ZSHRC_PATH="$HOME/dotfiles/.zshrc.$HOSTNAME"
+LOCAL_ZSHRC_PATH="$HOME/.zshrc.$HOSTNAME"
 [ -f $LOCAL_ZSHRC_PATH ] && source $LOCAL_ZSHRC_PATH
 
 # powerline
-if [ -n "$PYTHON_PATH" ]; then
-  export PATH=$PATH:$PYTHON_PATH/bin
+if [ -n "$POWERLINE_PATH" ]; then
   powerline-daemon -q
-  . $PYTHON_PATH/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+  . $POWERLINE_PATH/bindings/zsh/powerline.zsh
 fi
 
 # zplugがインストールされていなければインストールする
