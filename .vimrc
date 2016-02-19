@@ -12,8 +12,8 @@ set autoindent
 set hidden
 "インクリメンタルサーチを行う
 set incsearch
-"行番号を表示する
-set number
+"行番号を非表示に
+set nonumber
 "ファイル内の <Tab> が対応する空白の数
 set tabstop=4
 "タブを挿入するときの幅
