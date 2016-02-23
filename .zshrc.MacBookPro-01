@@ -1,2 +1,8 @@
 export PATH=$PATH:"$HOME/Library/Python/2.7/bin"
 export POWERLINE_PATH="$HOME/Library/Python/2.7/lib/python/site-packages/powerline"
+
+function dict() {
+  echo "dict => $1"
+  open dict://$1
+}
+alias dict=dict
