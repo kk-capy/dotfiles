@@ -30,8 +30,8 @@ ln -s "$DOTFILES/.zshrc" "$HOME/.zshrc"
 # zsh(環境依存)
 [ -e "$DOTFILES/.zshrc.$HOSTNAME" ] && ln -s "$DOTFILES/.zshrc.$HOSTNAME" "$HOME/.zshrc.local"
 # powerline
-[ ! -d "$HOME/.config" ] && mkdir ~/.config
-ln -s $DOTFILES/.config/$POWERLINECONF $HOME/.config/
+[ ! -d "$HOME/.config" ] && mkdir "$HOME/.config"
+ln -s $DOTFILES/$POWERLINECONF $HOME/.config/
 # tmux
 ln -s "$DOTFILES/$TMUXCONF" "$HOME/$TMUXCONF"
 
