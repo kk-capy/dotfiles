@@ -1,0 +1,7 @@
+# target: MacOS
+
+function dict() {
+  echo "dict => $1"
+  open dict://$1
+}
+alias dict=dict

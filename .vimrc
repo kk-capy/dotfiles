@@ -15,12 +15,12 @@ set incsearch
 "行番号を非表示に
 set nonumber
 "ファイル内の <Tab> が対応する空白の数
-set tabstop=4
+set tabstop=2
 "タブを挿入するときの幅
-set shiftwidth=4
+set shiftwidth=2
 "タブ文字の扱い方
 set expandtab "タブ文字の代わりに半角スペースを使用する
-set softtabstop=4
+set softtabstop=2
 "ステータス表示
 set laststatus=2
 "コマンド表示

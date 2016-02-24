@@ -1,8 +1,11 @@
 
 # 環境毎の設定ファイルを読み込む
-HOSTNAME=`hostname -s`
+# 端末別
 LOCAL_ZSHRC_PATH="$HOME/.zshrc.local"
 [ -f $LOCAL_ZSHRC_PATH ] && source $LOCAL_ZSHRC_PATH
+# OS種別
+OSTYPE_ZSHRC_PATH="$HOME/dotfiles/.zshrc.`uname`"
+[ -f $OSTYPE_ZSHRC_PATH ] && source $OSTYPE_ZSHRC_PATH
 
 # powerline
 if [ -n "$POWERLINE_PATH" ]; then

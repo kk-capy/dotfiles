@@ -20,29 +20,20 @@
 #
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-DIR=$(cd $(dirname $0); pwd)
-ZSHRC=".zshrc"
+DOTFILES=$(cd $(dirname $0); pwd)
 HOSTNAME=`hostname`
 TMUXCONF=".tmux.conf"
 POWERLINECONF="powerline"
 
-[ -d "$HOME/.config" ] && mkdir ~/.config
+# zsh
+ln -s "$DOTFILES/.zshrc" "$HOME/.zshrc"
+# zsh(環境依存)
+[ -e "$DOTFILES/.zshrc.$HOSTNAME" ] && ln -s "$DOTFILES/.zshrc.$HOSTNAME" "$HOME/.zshrc.local"
+# powerline
+[ ! -d "$HOME/.config" ] && mkdir ~/.config
+ln -s $DOTFILES/.config/$POWERLINECONF $HOME/.config/
+# tmux
+ln -s "$DOTFILES/$TMUXCONF" "$HOME/$TMUXCONF"
 
-if [ ! -d "$HOME/.config/$POWERLINECONF" ]; then
-  ln -s $DIR/.config/$POWERLINECONF $HOME/.config/
-else
-  echo "$POWERLINECONF already exist"
-fi
-
-if [ ! -e "$HOME/$ZSHRC" ]; then
-  ln -s "$DIR/$ZSHRC" "$HOME/$ZSHRC"
-else
-  echo "$ZSHRC already exist"
-fi
-
-if [ ! -e "$HOME/$TMUXCONF" ]; then
-  ln -s "$DIR/$TMUXCONF" "$HOME/$TMUXCONF"
-else
-  echo "$TMUXCONF already exist"
-fi
+echo "usage:"
 
