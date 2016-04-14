@@ -1,0 +1,47 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "b18a3428-53dc-4f98-875c-c11b684501dd"
+  "atom-memolist":
+    memo_dir_path: "/Users/katsutoshi/Dropbox/memo"
+  "atom-quickmemo":
+    memoDirPath: "~/Dropbox/memo"
+    templatePath: "~/Dropbox/memo/.template.md"
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
+  build: {}
+  core:
+    disabledPackages: [
+      "pandoc"
+      "atom-jade"
+      "docs-snippets"
+      "atom-ternjs"
+    ]
+    excludeVcsIgnoredPaths: false
+    themes: [
+      "flatland-dark-ui"
+      "flatland-dark"
+    ]
+  editor:
+    fontFamily: "mplus-1m-regular"
+    invisibles: {}
+  "exception-reporting":
+    userId: "6b465161-9b31-2b71-bb40-017344eeb2aa"
+  "file-icons": {}
+  "git-plus": {}
+  "jsdoc-generator": {}
+  jshint:
+    supportLintingJsx: true
+  "markdown-pdf": {}
+  "markdown-preview":
+    breakOnSingleNewline: true
+  "markdown-table-formatter": {}
+  "markdown-writer": {}
+  "npm-install": {}
+  "one-dark-ui": {}
+  react: {}
+  term2: {}
+  "tree-view": {}
+  "vim-mode": {}
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false

@@ -35,6 +35,7 @@ zplug "stedolan/jq", \
   file:jq, \
   from:gh-r \
   | zplug "b4b4r07/emoji-cli" # 絵文字入力補助
+zplug "mollifier/anyframe" # pecoなどのインクリメンタルサーチを組み合わせて便利にする
 
 # check コマンドで未インストール項目があるかどうか verbose にチェックし
 # false のとき（つまり未インストール項目がある）y/N プロンプトで
@@ -69,6 +70,16 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+# cdrを有効化
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+## cdr設定
+#zstyle ':completion:*' recent-dirs-insert both
+#zstyle ':chpwd:*' recent-dirs-max 500
+#zstyle ':chpwd:*' recent-dirs-default true
+#zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/chpwd-recent-dirs"
+#zstyle ':chpwd:*' recent-dirs-pushd true
+
 # エイリアス
 alias la='ls -la'
 alias cdb='cd-bookmark'
@@ -76,10 +87,12 @@ alias vg='vagrant'
 alias npmgl='npm list -g | grep "^[├└]"'
 alias t='tmux'
 alias ta='tmux attach'
+alias tat='tmux attach -t'
 alias tl='tmux ls'
 alias fe='forever'
 alias ka='k -a'
 alias usbserial='screen `ls /dev/cu.usbserial-*` 115200 -L'
 alias reload='exec zsh -l'
 alias zshrc='vi ~/.zshrc'
+alias cdr=anyframe-widget-cdr
 

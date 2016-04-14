@@ -1,0 +1,43 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+.tree-view {
+
+}
+
+// style the background and foreground colors on the atom-text-editor-element
+// itself
+atom-text-editor {
+
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow
+// expression
+atom-text-editor::shadow .cursor {
+
+}
+
+// Change the transparency of the non-active pane.
+.vertical{
+  .pane{
+    opacity: 0.70;
+    &.active{
+      opacity: 1.0;
+    }
+  }
+}
+
+// Optimize the font for Japanese
+// Default font << Hiragino + Meiryo
+div.title,
+div.tree-view-scroller,
+div.status-bar-left{
+  font-family:'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif
+}
