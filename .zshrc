@@ -95,4 +95,5 @@ alias usbserial='screen `ls /dev/cu.usbserial-*` 115200 -L'
 alias reload='exec zsh -l'
 alias zshrc='vi ~/.zshrc'
 alias cdr=anyframe-widget-cdr
+alias rn='react-native'
 
