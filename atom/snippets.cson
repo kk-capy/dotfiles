@@ -16,3 +16,69 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+# my
+'.source.js*':
+  'beacon key':
+    'prefix': 'beacon'
+    'body': '`\${$1.major}:\${$1.minor}`'
+  'latlng':
+    'prefix': 'latlng'
+    'body': '`\${$1.latitude},\${$1.longitude}`'
+  'lodash':
+    'prefix': 'lodash'
+    'body': 'import _ from \'lodash\';'
+  'moment':
+    'prefix': 'moment'
+    'body': 'import moment from \'moment\';'
+  'import':
+    'prefix': 'import from ;'
+    'body': 'import $1 from \'$1\';'
+  'export default':
+    'prefix': 'exportdefault'
+    'body': 'export default $1;'
+  'const {} = props':
+    'prefix': 'constprops'
+    'body': 'const {$1} = $2;'
+  'let':
+    'prefix': 'let'
+    'body': 'let $1 = $2;'
+  'const':
+    'prefix': 'const normal'
+    'body': 'const $1 = $2;'
+  'middleware':
+    'prefix': 'rdxmiddleware'
+    'body': 'const $1 = store => next => action => {\n  next(action);\n};'
+  'try':
+    'prefix': 'try'
+    'body': 'try {\n  $1\n} catch(err) {\n  ${2:console.error(err);}\n}'
+  'debug log':
+    'prefix': 'dbg'
+    'body': 'console.log(\'$1\', $1);'
+  'react component':
+    'prefix': 'component'
+    'body': '<$1 $2 />'
+  'react import':
+    'prefix': 'import react'
+    'body': 'import React, {Component} from \'react\';'
+  'generator function':
+    'prefix': 'function*'
+    'body': 'function* $1() {$2}'
+  'class constructor':
+    'prefix': 'constructor('
+    'body': 'constructor(${1:props}) {\n  ${2:super(props);}\n}'
+  'class':
+    'prefix': 'class'
+    'body': 'class $1 ${2:extends }$3 {\n}'
+  'react component class':
+    'prefix': 'class react'
+    'body': 'class $1 extends Component {\n  $2\n}'
+  'react inline component':
+    'prefix': 'const react'
+    'body': '${1:export} ${2:default} $3 = (${4:props}) => $5;'
+  'reduce':
+    'prefix': 'reduce'
+    'body': 'reduce((h, $1) => (h[$2] = $3, h), {});'
+  'koa-router':
+    'prefix': 'router'
+    'body': 'import Router from \'koa-router\';\n\nexport default new Router()\n$1\n;'

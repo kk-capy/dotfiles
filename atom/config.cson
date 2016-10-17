@@ -4,44 +4,82 @@
   "atom-memolist":
     memo_dir_path: "/Users/katsutoshi/Dropbox/memo"
   "atom-quickmemo":
-    memoDirPath: "~/Dropbox/memo"
-    templatePath: "~/Dropbox/memo/.template.md"
-  "autocomplete-plus":
-    confirmCompletion: "tab and enter"
+    memoDirPath: "~/Documents/memo"
+    templatePath: "~/Documents/memo/.template.md"
+  "atom-ternjs":
+    useSnippets: true
+  "atom-text-editor":
+    "autocomplete-active":
+      "ctrl-shift-a": "autocomplete-plus:confirm"
+      tab: "unset!"
   build: {}
   core:
+    allowPendingPaneItems: false
     disabledPackages: [
       "pandoc"
       "atom-jade"
       "docs-snippets"
-      "atom-ternjs"
+      "ex-mode"
+      "autocomplete-paths"
+      "javascript-snippets"
+      "es6-javascript"
+      "graphviz-preview"
+      "language-dot"
+      "omnisharp-atom"
     ]
     excludeVcsIgnoredPaths: false
     themes: [
       "flatland-dark-ui"
       "flatland-dark"
     ]
+  "cursor-history": {}
+  "custom-title":
+    template: "<% if (projectName) { %> - <%= projectName %><% } %> / <%= relativeFilePath %>"
+  dash:
+    filenames:
+      "gruntfile.js": [
+        "grunt"
+      ]
+    grammars:
+      JavaScript: [
+        "nodejs"
+      ]
   editor:
     fontFamily: "mplus-1m-regular"
     invisibles: {}
+    showInvisibles: true
+    softWrap: true
+  emmet: {}
   "exception-reporting":
     userId: "6b465161-9b31-2b71-bb40-017344eeb2aa"
   "file-icons": {}
+  "find-and-replace": {}
+  "fuzzy-finder":
+    useAlternateScoring: false
   "git-plus": {}
+  "highlight-selected": {}
   "jsdoc-generator": {}
   jshint:
     supportLintingJsx: true
+  "language-babel": {}
+  linter: {}
   "markdown-pdf": {}
   "markdown-preview":
     breakOnSingleNewline: true
   "markdown-table-formatter": {}
   "markdown-writer": {}
+  "node-debugger":
+    debugPort: 4001
   "npm-install": {}
   "one-dark-ui": {}
   react: {}
   term2: {}
   "tree-view": {}
-  "vim-mode": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  "vim-mode-plus":
+    highlightSearch: true
+    useClipboardAsDefaultRegister: true
   "vim-surround": {}
   welcome:
     showOnStartup: false

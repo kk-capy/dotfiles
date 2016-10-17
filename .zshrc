@@ -15,8 +15,7 @@ fi
 
 # zplugがインストールされていなければインストールする
 [[ -d ~/.zplug ]] || {
-  curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
-  source ~/.zplug/zplug && zplug update --self
+  curl -L get.zplug.sh | zsh
 }
 
 # zplugを読み込む
@@ -30,11 +29,6 @@ zplug "djui/alias-tips" # 入力したコマンドにエイリアスがあれば
 zplug "rimraf/k" # lsより見やすい一覧
 #zplug "b4b4r07/enhancd", of:enhancd.sh # kと競合する？
 zplug "arialdomartini/oh-my-git"
-zplug "stedolan/jq", \
-  as:command, \
-  file:jq, \
-  from:gh-r \
-  | zplug "b4b4r07/emoji-cli" # 絵文字入力補助
 zplug "mollifier/anyframe" # pecoなどのインクリメンタルサーチを組み合わせて便利にする
 
 # check コマンドで未インストール項目があるかどうか verbose にチェックし
@@ -53,6 +47,9 @@ zplug load --verbose
 # コマンド補完を有効化
 autoload -U compinit
 compinit
+
+# zsh functionのパスを通す
+fpath=(/usr/local/Cellar/zsh/5.2/share/zsh/functions ${fpath})
 
 # ヒストリ(履歴)を保存、数を増やす
 HISTFILE=~/.zsh_history
@@ -95,5 +92,7 @@ alias usbserial='screen `ls /dev/cu.usbserial-*` 115200 -L'
 alias reload='exec zsh -l'
 alias zshrc='vi ~/.zshrc'
 alias cdr=anyframe-widget-cdr
-alias rn='react-native'
+alias rn='$(npm bin)/react-native'
+alias rnpm='$(npm bin)/rnpm'
+alias bn='$(npm bin)/babel-node'
 
