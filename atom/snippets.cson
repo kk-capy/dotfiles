@@ -33,10 +33,13 @@
     'body': 'import moment from \'moment\';'
   'import':
     'prefix': 'import from ;'
-    'body': 'import $1 from \'$1\';'
+    'body': 'import $1 from \'$2\';'
   'export default':
     'prefix': 'exportdefault'
     'body': 'export default $1;'
+  'export * from':
+    'prefix': 'exp*'
+    'body': 'export * from \'$1\';'
   'const {} = props':
     'prefix': 'constprops'
     'body': 'const {$1} = $2;'

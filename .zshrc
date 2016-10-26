@@ -95,4 +95,6 @@ alias cdr=anyframe-widget-cdr
 alias rn='$(npm bin)/react-native'
 alias rnpm='$(npm bin)/rnpm'
 alias bn='$(npm bin)/babel-node'
+alias f='find . -name '
+alias xg='xargs grep '
 

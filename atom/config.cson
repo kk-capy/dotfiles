@@ -1,4 +1,11 @@
 "*":
+  "activate-power-mode":
+    comboMode:
+      enabled: false
+    particles:
+      size: {}
+      spawnCount: {}
+    screenShake: {}
   "atom-beautify":
     _analyticsUserId: "b18a3428-53dc-4f98-875c-c11b684501dd"
   "atom-memolist":
@@ -26,8 +33,10 @@
       "graphviz-preview"
       "language-dot"
       "omnisharp-atom"
+      "activate-power-mode"
     ]
     excludeVcsIgnoredPaths: false
+    telemetryConsent: "limited"
     themes: [
       "flatland-dark-ui"
       "flatland-dark"
@@ -46,6 +55,7 @@
       ]
   editor:
     fontFamily: "mplus-1m-regular"
+    fontSize: 15
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -73,6 +83,12 @@
   "npm-install": {}
   "one-dark-ui": {}
   react: {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   term2: {}
   "tree-view": {}
   "vim-mode":
