@@ -34,6 +34,7 @@
       "language-dot"
       "omnisharp-atom"
       "activate-power-mode"
+      "atom-mermaid"
     ]
     excludeVcsIgnoredPaths: false
     telemetryConsent: "limited"
