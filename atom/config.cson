@@ -37,11 +37,13 @@
       "atom-mermaid"
     ]
     excludeVcsIgnoredPaths: false
+    projectHome: "~/development"
     telemetryConsent: "limited"
     themes: [
       "flatland-dark-ui"
       "flatland-dark"
     ]
+    warnOnLargeFileLimit: 1
   "cursor-history": {}
   "custom-title":
     template: "<% if (projectName) { %> - <%= projectName %><% } %> / <%= relativeFilePath %>"

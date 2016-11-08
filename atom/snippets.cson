@@ -79,6 +79,12 @@
   'react inline component':
     'prefix': 'const react'
     'body': '${1:export} ${2:default} $3 = (${4:props}) => $5;'
+  'react proptypes':
+    'prefix': 'proptypes'
+    'body': 'static get propTypes() { return {\n  $1\n}}'
+  'react defaultprops':
+    'prefix': 'defaultprops'
+    'body': 'static get defaultProps() { return {\n  $1\n}}'
   'reduce':
     'prefix': 'reduce'
     'body': 'reduce((h, $1) => (h[$2] = $3, h), {});'
