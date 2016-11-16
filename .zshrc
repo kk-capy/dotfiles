@@ -15,11 +15,11 @@ fi
 
 # zplugがインストールされていなければインストールする
 [[ -d ~/.zplug ]] || {
-  curl -L get.zplug.sh | zsh
+  curl -sL zplug.sh/installer | zsh
 }
 
 # zplugを読み込む
-source ~/.zplug/zplug
+source ~/.zplug/init.zsh
 
 # プラグイン
 zplug "zsh-users/zsh-syntax-highlighting" # シンタックスハイライト
