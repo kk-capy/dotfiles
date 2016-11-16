@@ -35,6 +35,7 @@
       "omnisharp-atom"
       "activate-power-mode"
       "atom-mermaid"
+      "react"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "~/development"
@@ -60,6 +61,7 @@
     fontFamily: "mplus-1m-regular"
     fontSize: 15
     invisibles: {}
+    scrollPastEnd: true
     showInvisibles: true
     softWrap: true
   emmet: {}
@@ -75,7 +77,8 @@
   jshint:
     supportLintingJsx: true
   "language-babel": {}
-  linter: {}
+  linter:
+    errorPanelHeight: 122
   "markdown-pdf": {}
   "markdown-preview":
     breakOnSingleNewline: true
@@ -98,7 +101,11 @@
     useClipboardAsDefaultRegister: true
   "vim-mode-plus":
     highlightSearch: true
+    incrementalSearch: true
     useClipboardAsDefaultRegister: true
   "vim-surround": {}
   welcome:
     showOnStartup: false
+".coffee.jsx.source":
+  editor:
+    scrollPastEnd: true
