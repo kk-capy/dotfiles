@@ -34,6 +34,8 @@ ln -s "$DOTFILES/.zshrc" "$HOME/.zshrc"
 ln -s $DOTFILES/$POWERLINECONF $HOME/.config/
 # tmux
 ln -s "$DOTFILES/$TMUXCONF" "$HOME/$TMUXCONF"
+# gitconfig
+[ ! -d "$HOME/.gitconfig" ] && ln -s "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 
 echo "usage:"
 
