@@ -28,11 +28,11 @@
   'ctrl-e': 'unset!'
   #'ctrl-j': 'vim-mode:copy-from-line-below'
 'atom-text-editor.vim-mode-plus.normal-mode':
-  'S': 'vim-mode-plus:surround-word'
+  'S': 'vim-mode-plus:surround'
   ':': 'vim-mode-plus-ex-mode:open'
   '!': 'vim-mode-plus-ex-mode:toggle-setting'
 'atom-text-editor.vim-mode-plus.visual-mode':
-  'S': 'vim-mode-plus:surround-word'
+  'S': 'vim-mode-plus:surround'
 'atom-text-editor.vim-mode-plus.normal-mode, atom-text-editor.vim-mode-plus.visual-mode':
   'f5': 'vim-mode-plus-user:replace-with-execution'
   'shift-f5': 'vim-mode-plus-user:replace-with-execution-keep-original-text'
