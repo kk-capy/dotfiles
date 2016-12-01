@@ -107,3 +107,6 @@ alias ga='git add'
 alias gc='git commit'
 alias gco='git checkout'
 alias glogs='git logs'
+# archive
+alias tz='tar zcvf'
+alias untz='tar -xvzf'
