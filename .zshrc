@@ -59,19 +59,19 @@ setopt EXTENDED_HISTORY # 開始と終了を記録
 setopt share_history # 異なるセッション間で共有
 setopt hist_ignore_dups # 同じコマンドラインを連続で実行した場合は登録しない
 # pecoとの連携
-function peco-history-selection() {
-  local tac
-  if which tac > /dev/null; then
-    tac="tac"
-  else
-    tac="tail -f"	
-  fi
-  BUFFER=`history -n 1 | eval $tac | awk '!a[$0]++' | peco`
-  CURSOR=$#BUFFER
-  zle reset-prompt
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | eval $tac | awk '!a[$0]++' | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    # zle clear-screen
 }
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+zle -N peco-select-history
+bindkey '^R' peco-select-history
 
 # cdrを有効化
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
