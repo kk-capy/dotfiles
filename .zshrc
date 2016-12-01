@@ -25,7 +25,7 @@ source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting" # シンタックスハイライト
 zplug "zsh-users/zsh-history-substring-search" # コマンドライン履歴から単語を補完する
 zplug "mollifier/cd-bookmark" # ディレクトリのお気に入りを管理
-zplug "djui/alias-tips" # 入力したコマンドにエイリアスがあれば教えてくれる
+#zplug "djui/alias-tips" # 入力したコマンドにエイリアスがあれば教えてくれる
 zplug "rimraf/k" # lsより見やすい一覧
 #zplug "b4b4r07/enhancd", of:enhancd.sh # kと競合する？
 zplug "arialdomartini/oh-my-git"
