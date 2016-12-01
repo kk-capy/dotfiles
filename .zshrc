@@ -60,7 +60,13 @@ setopt share_history # 異なるセッション間で共有
 setopt hist_ignore_dups # 同じコマンドラインを連続で実行した場合は登録しない
 # pecoとの連携
 function peco-history-selection() {
-  BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+  local tac
+  if which tac > /dev/null; then
+    tac="tac"
+  else
+    tac="tail -f"	
+  fi
+  BUFFER=`history -n 1 | eval $tac | awk '!a[$0]++' | peco`
   CURSOR=$#BUFFER
   zle reset-prompt
 }
