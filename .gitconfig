@@ -1,8 +1,6 @@
 [user]
 	email = kk@dummy.ne.jp
 	name = kk
-[merge]
-	ff = false
 [pull]
 	rebase = true
 [alias]
