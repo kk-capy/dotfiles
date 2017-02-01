@@ -86,7 +86,6 @@ add-zsh-hook chpwd chpwd_recent_dirs
 # エイリアス
 alias la='ls -la'
 alias cdb='cd-bookmark'
-alias vg='vagrant'
 alias t='tmux'
 alias ta='tmux attach'
 alias tat='tmux attach -t'
@@ -113,6 +112,12 @@ alias ga='git add'
 alias gc='git commit'
 alias gco='git checkout'
 alias glogs='git logs'
+alias gpush='git push origin `git rev-parse --abbrev-ref HEAD`'
 # archive
 alias tz='tar zcvf'
 alias untz='tar -xvzf'
+# vagrant
+alias vg='vagrant'
+# ansible
+alias ap-site='ansible-playbook playbooks/site.yml'
+

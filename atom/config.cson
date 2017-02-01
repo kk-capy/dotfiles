@@ -36,6 +36,8 @@
       "activate-power-mode"
       "atom-mermaid"
       "react"
+      "git-plus"
+      "tablr"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "~/development"
@@ -59,8 +61,8 @@
       ]
   editor:
     fontFamily: "mplus-1m-regular"
-    fontSize: 15
-    invisibles: {}
+    invisibles:
+      space: " "
     scrollPastEnd: true
     showInvisibles: true
     softWrap: true
@@ -96,6 +98,8 @@
     rightEditorColor: "green"
     syncHorizontalScroll: true
   term2: {}
+  "terminal-plus":
+    core: {}
   "tree-view": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true

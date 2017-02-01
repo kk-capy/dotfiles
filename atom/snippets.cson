@@ -63,7 +63,7 @@
     'body': '<$1 $2 />'
   'react import':
     'prefix': 'import react'
-    'body': 'import React, {Component} from \'react\';'
+    'body': 'import React, {PureComponent} from \'react\';'
   'generator function':
     'prefix': 'function*'
     'body': 'function* $1() {$2}'
@@ -75,7 +75,7 @@
     'body': 'class $1 ${2:extends }$3 {\n}'
   'react component class':
     'prefix': 'class react'
-    'body': 'class $1 extends Component {\n  $2\n}'
+    'body': 'class $1 extends PureComponent {\n  render(){\n    return(\n$2\n    );\n  }\n}'
   'react inline component':
     'prefix': 'const react'
     'body': '${1:export} ${2:default} $3 = (${4:props}) => $5;'
@@ -91,3 +91,6 @@
   'koa-router':
     'prefix': 'router'
     'body': 'import Router from \'koa-router\';\n\nexport default new Router()\n$1\n;'
+  'es6 arrow function':
+    'prefix': 'af'
+    'body': '$1 => $2'
