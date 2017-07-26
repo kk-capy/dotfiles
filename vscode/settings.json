@@ -1,0 +1,35 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "markdown-pdf.outputDirectory": "/Users/kk/Downloads/outputPDF",
+    "markdown-pdf.styles": [
+        "/Users/kk/development/markdown-styles/layouts/github/assets/css/github-markdown.css"
+    ],
+    "editor.tabSize": 2,
+    "editor.fontSize": 14,
+    "editor.fontFamily": "CicaE",
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    // vim
+    "vim.easymotion": true,
+    "vim.leader": "\\",
+    "vim.useSystemClipboard":true,
+    //
+    "window.zoomLevel": 0,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.welcome.enabled": false,
+    "workbench.editor.enablePreview": false,
+    //
+    "beautify.config": "~/.beautifyrc",
+    "vsicons.dontShowNewVersionMessage": true,
+    // ターミナル
+    "terminal.integrated.fontFamily": "CicaE",
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.fontSize": 14,
+    // html
+    "css.remoteStyleSheets": [
+        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    ]
+}

@@ -48,6 +48,9 @@ zplug load --verbose
 autoload -U compinit
 compinit
 
+# zmvを有効化
+autoload -Uz zmv
+
 # zsh functionのパスを通す
 fpath=(/usr/local/Cellar/zsh/5.2/share/zsh/functions ${fpath})
 
@@ -84,6 +87,7 @@ add-zsh-hook chpwd chpwd_recent_dirs
 #zstyle ':chpwd:*' recent-dirs-pushd true
 
 # エイリアス
+#alias zmv='noglob zmv -W'
 alias la='ls -la'
 alias cdb='cd-bookmark'
 alias t='tmux'
@@ -105,7 +109,8 @@ alias bn='$(npm bin)/babel-node'
 alias fe='forever'
 # git
 alias g='git'
-alias gb='git branch -a'
+alias gb='git branch'
+alias gd='git diff'
 alias gs='git status'
 alias gl='git ls-files'
 alias ga='git add'

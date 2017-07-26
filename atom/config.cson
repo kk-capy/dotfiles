@@ -19,9 +19,25 @@
     "autocomplete-active":
       "ctrl-shift-a": "autocomplete-plus:confirm"
       tab: "unset!"
+  "autocomplete-js-import":
+    fuzzy:
+      enabled: true
   build: {}
   core:
     allowPendingPaneItems: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "pandoc"
       "atom-jade"
@@ -36,8 +52,9 @@
       "activate-power-mode"
       "atom-mermaid"
       "react"
-      "git-plus"
       "tablr"
+      "nuclide"
+      "node-debugger"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "~/development"
@@ -61,6 +78,7 @@
       ]
   editor:
     fontFamily: "mplus-1m-regular"
+    fontSize: 13
     invisibles:
       space: " "
     scrollPastEnd: true
@@ -73,22 +91,55 @@
   "find-and-replace": {}
   "fuzzy-finder":
     useAlternateScoring: false
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "6ad8e67a-94be-42ba-a099-dbf00865051e"
+  "highlight-line":
+    enableBackgroundColor: false
   "highlight-selected": {}
   "jsdoc-generator": {}
   jshint:
     supportLintingJsx: true
   "language-babel": {}
-  linter:
-    errorPanelHeight: 122
+  linter: {}
   "markdown-pdf": {}
   "markdown-preview":
     breakOnSingleNewline: true
   "markdown-table-formatter": {}
   "markdown-writer": {}
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "node-debugger":
-    debugPort: 4001
+    debugHost: "localhost"
+    debugPort: 8081
+    nodePath: "/Users/kk/.anyenv/envs/ndenv/shims/node"
   "npm-install": {}
+  nuclide:
+    "nuclide-adb-logcat": {}
+    "nuclide-arcanist": {}
+    "nuclide-buck": {}
+    "nuclide-clang": {}
+    "nuclide-console": {}
+    "nuclide-datatip": {}
+    "nuclide-debugger-native": {}
+    "nuclide-debugger-node": {}
+    "nuclide-debugger-php": {}
+    "nuclide-definition-preview": {}
+    "nuclide-diagnostics-ui": {}
+    "nuclide-file-tree":
+      allowKeyboardPrefixNavigation: false
+    "nuclide-flow": {}
+    "nuclide-hack": {}
+    "nuclide-health": {}
+    "nuclide-ios-simulator-logs": {}
+    "nuclide-ocaml": {}
+    "nuclide-python": {}
+    "nuclide-react-native": {}
+    "nuclide-related-files": {}
+    "nuclide-remote-projects": {}
+    "nuclide-swift": {}
   "one-dark-ui": {}
   react: {}
   "split-diff":
@@ -113,3 +164,6 @@
 ".coffee.jsx.source":
   editor:
     scrollPastEnd: true
+".gfm.source":
+  editor:
+    tabLength: 4
