@@ -105,8 +105,6 @@ alias xg='xargs grep '
 alias rn='$(npm bin)/react-native'
 alias rnpm='$(npm bin)/rnpm'
 alias npmgl='npm list -g | grep "^[├└]"'
-alias bn='$(npm bin)/babel-node'
-alias fe='forever'
 # git
 alias g='git'
 alias gb='git branch'
@@ -117,7 +115,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gco='git checkout'
 alias glogs='git logs'
-alias gpush='git push origin `git rev-parse --abbrev-ref HEAD`'
+alias gp='git push origin `git rev-parse --abbrev-ref HEAD`'
 # archive
 alias tz='tar zcvf'
 alias untz='tar -xvzf'
@@ -126,3 +124,5 @@ alias vg='vagrant'
 # ansible
 alias ap-site='ansible-playbook playbooks/site.yml'
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

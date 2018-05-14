@@ -15,14 +15,11 @@
     // vim
     "vim.easymotion": true,
     "vim.leader": "\\",
-    "vim.useSystemClipboard":true,
+    "vim.useSystemClipboard": true,
     //
     "window.zoomLevel": 0,
-    "vim.disableAnnoyingNeovimMessage": true,
-    "workbench.welcome.enabled": false,
     "workbench.editor.enablePreview": false,
     //
-    "beautify.config": "~/.beautifyrc",
     "vsicons.dontShowNewVersionMessage": true,
     // ターミナル
     "terminal.integrated.fontFamily": "CicaE",
@@ -31,5 +28,17 @@
     // html
     "css.remoteStyleSheets": [
         "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    ],
+    "files.associations": {
+        "*.html": "html"
+    },
+    "emmet.includeLanguages": {
+        "nunjucks": "nunjucks",
+    },
+    // prettier
+    // コード整形
+    "editor.formatOnSave": true,
+    "prettier.disableLanguages": [
+        "vue"
     ]
 }

@@ -1,12 +1,12 @@
 // 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
     {
-        "key": "shift+a",
+        "key": "ctrl+shift+a",
         "command": "explorer.newFolder",
         "when": "filesExplorerFocus"
     },
     {
-        "key": "a",
+        "key": "ctrl+a",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus"
     },
@@ -35,11 +35,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+e",
-        "command": "editor.emmet.action.expandAbbreviation",
-        "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !config.emmet.suggestExpandedAbbreviation && !editorHasMultipleSelections && !editorHasSelection && !editorReadonly && !editorTabMovesFocus"
-    },
-    {
         "key": "tab",
         "command": "-editor.emmet.action.expandAbbreviation",
         "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !config.emmet.suggestExpandedAbbreviation && !editorHasMultipleSelections && !editorHasSelection && !editorReadonly && !editorTabMovesFocus"
@@ -62,7 +57,7 @@
         "when": "editorTextFocus && !inDebugRepl && vim.mode == 'Insert'"
     },
     {
-        "key": "shift+cmd+t",
+        "key": "shift+cmd+t shift+cmd+t",
         "command": "workbench.action.terminal.new"
     },
     {
@@ -115,5 +110,58 @@
     {
         "key": "ctrl+cmd+p",
         "command": "projectManager.listProjectsNewWindow"
+    },
+    {
+        "key": "cmd+e",
+        "command": "editor.emmet.action.expandAbbreviation",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "shift+cmd+t shift+cmd+p",
+        "command": "workbench.action.terminal.split"
+    },
+    {
+        "key": "ctrl+alt+cmd+[IntlYen]",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+t shift+cmd+k",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+t shift+cmd+j",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
     }
 ]
