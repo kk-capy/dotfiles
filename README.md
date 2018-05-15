@@ -15,9 +15,11 @@ my dotfiles
 
 # usage
 
+sh ./setup-all.sh
+
 ## pre install
 
-事前にインストールする
+~~事前にインストールする~~
 
 - zsh
 - git
@@ -47,8 +49,8 @@ pip install --user powerline-status
 
 ## create .zshrc.local
 
-~/.zshrc.local に独自の環境変数を定義すること
-powerlineを使用するには
+~/.zshrc.localは環境依存の処理を定義する
+powerlineを使用する場合
 POWERLINE_PATH="[powerlineのパス]" 
 の設定を含める
 

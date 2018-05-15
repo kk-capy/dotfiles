@@ -42,7 +42,7 @@ if ! zplug check --verbose; then
 fi
 
 # プラグインを読み込み、コマンドにパスを通す
-zplug load --verbose
+zplug load
 
 # コマンド補完を有効化
 autoload -U compinit

@@ -17,4 +17,4 @@
 [commit]
 	template = ~/.gitmessage.txt
 [core]
-	excludesfile = /Users/kk/.gitignore
+	excludesfile = ~/.gitignore
